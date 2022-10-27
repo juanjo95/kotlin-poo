@@ -16,11 +16,18 @@ class MainActivity : AppCompatActivity() {
         println(juan.passport)
 
         anonimo.Person()
+        anonimo.name = "Pablo"
         println(anonimo.alive)
         println(anonimo.name)
         println(anonimo.passport)
 
         juan.die()
         println(juan.alive)
+
+        var bicho:Pokemon = Pokemon()
+        println(bicho.getName())
+        println(bicho.getAttackPower())
+        bicho.setLife(65f)
+        println(bicho.getLife())
     }
 }
