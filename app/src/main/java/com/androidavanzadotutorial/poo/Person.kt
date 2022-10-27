@@ -1,8 +1,13 @@
 package com.androidavanzadotutorial.poo
 
-class Person {
+class Person(var name:String = "Anonimo", var passport:String? = null) {
 
     var alive:Boolean = true
+
+    fun Person(){
+        name = "Pedro"
+        passport = "1234567"
+    }
 
     fun die(){
         alive = false
