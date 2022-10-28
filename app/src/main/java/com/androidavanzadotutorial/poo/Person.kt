@@ -1,6 +1,6 @@
 package com.androidavanzadotutorial.poo
 
-open class Person(var name:String = "Anonimo", var passport:String? = null) {
+open class Person(var name:String = "Anonimo", var passport:String? = null) : Thanks() {
 
     var alive:Boolean = true
 
@@ -11,6 +11,7 @@ open class Person(var name:String = "Anonimo", var passport:String? = null) {
 
     fun die(){
         alive = false
+        this.thanksCure()
     }
 
 }
