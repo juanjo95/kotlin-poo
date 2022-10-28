@@ -1,6 +1,6 @@
 package com.androidavanzadotutorial.poo
 
-class Person(var name:String = "Anonimo", var passport:String? = null) {
+open class Person(var name:String = "Anonimo", var passport:String? = null) {
 
     var alive:Boolean = true
 

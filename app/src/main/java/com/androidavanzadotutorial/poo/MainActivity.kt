@@ -24,6 +24,15 @@ class MainActivity : AppCompatActivity() {
         juan.die()
         println(juan.alive)
 
+        var pele:Athlete = Athlete("Pele", "123456789","Futbol")
+        println(pele.alive)
+        println(pele.name)
+        println(pele.passport)
+        println(pele.sport)
+
+        pele.die()
+        println(pele.alive)
+
         var bicho:Pokemon = Pokemon()
         println(bicho.getName())
         println(bicho.getAttackPower())
