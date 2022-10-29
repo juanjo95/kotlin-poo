@@ -38,5 +38,14 @@ class MainActivity : AppCompatActivity() {
         println(bicho.getAttackPower())
         bicho.setLife(65f)
         println(bicho.getLife())
+
+        var sc = SubClasses()
+        println(sc.presentar())
+
+        var ani = SubClasses.Anidada()
+        println(ani.presentar())
+
+        var int = SubClasses().Interna()
+        println(int.presentar())
     }
 }
