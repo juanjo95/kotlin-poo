@@ -4,6 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
+
+    object ejemplo {
+        var apodo = "Eje"
+        fun saludo(){
+            println("Hola, me llaman $apodo")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,5 +55,9 @@ class MainActivity : AppCompatActivity() {
 
         var int = SubClasses().Interna()
         println(int.presentar())
+
+        println(ejemplo.saludo())
+        ejemplo.apodo = "SuperEjemplo"
+        println(ejemplo.saludo())
     }
 }
