@@ -69,6 +69,19 @@ class MainActivity : AppCompatActivity() {
         var nueva:Star = Star()
         println(nueva)
 
+        var hoy:Dias = Dias.MARTES
+        var semana = Dias.values()
+        for (i in semana) println(i)
+
+        println(Dias.valueOf("MIERCOLES"))
+        println(hoy.name)
+        println(hoy.ordinal)
+
+        println(hoy.saludar())
+        println(hoy.laboral)
+        println(hoy.horas)
+        hoy =  Dias.DOMINGO
+
 
     }
 }
