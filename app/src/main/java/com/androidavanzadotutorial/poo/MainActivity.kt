@@ -59,5 +59,16 @@ class MainActivity : AppCompatActivity() {
         println(ejemplo.saludo())
         ejemplo.apodo = "SuperEjemplo"
         println(ejemplo.saludo())
+
+        var sol:Star = Star("Sol",696340f, "Via lactea")
+        println(sol)
+        println(sol.alive)
+        sol.alive = false
+        println(sol.alive)
+
+        var nueva:Star = Star()
+        println(nueva)
+
+
     }
 }
