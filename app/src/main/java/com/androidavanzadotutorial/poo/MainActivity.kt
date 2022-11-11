@@ -12,9 +12,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun String.noSpaces():String{
+        return this.replace(" ","")
+    }
+
+    private fun IntArray.show(){
+        print("[")
+        for (i in this) print("$i ")
+        println("]")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /*
+            Funciones de extension
+         */
+        var usuario:String = "    soy  yo  "
+        println("${usuario} (${usuario.length}) ---- ${usuario.noSpaces()} (${usuario.noSpaces().length})")
+
+        var array1:Array<Int> = arrayOf(1,2,3,4,5,6,7,8,9)
+        var array2 = IntArray(3)
+        array2[0] = 10
+        array2[1] = 20
+        array2[2] = 30
+        println("Array2: ")
+        array2.show()
+        var array3:IntArray = intArrayOf(1,2,3,4)
+        println("Array3: ")
+        array3.show()
 
         var num:Int = 0
         var juan:Person = Person("Juan Jose","1053847013")
