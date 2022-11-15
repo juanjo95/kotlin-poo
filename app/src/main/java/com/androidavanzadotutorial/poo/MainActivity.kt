@@ -78,9 +78,21 @@ class MainActivity : AppCompatActivity() {
         println("La division entre 12 y 3 es ${calculadora(12,3,::dividir)}")
 
         /**
-         * Funciones de orden superior en objetos
+         * Lambdas
          */
+        var funcion = { x:Int, y:Int -> x+y }
+        println("La suma entre 80 y 20 con variable es ${calculadora(80,20, funcion)}")
+        funcion = { x:Int, y:Int -> x-y }
+        println("La resta entre 50 y 10 con variable es ${calculadora(50,10, funcion)}")
 
+        println("La suma entre 80 y 20 con lambda es ${calculadora(80,20, { x:Int, y:Int -> x+y })}")
+        println("La resta entre 50 y 10 con lambda es ${calculadora(50,10, { x:Int, y:Int -> x-y })}")
+        println("La Potencia de 2 elevado a la 5 con lambda es ${calculadora(2,5) { x, y ->
+            var valor = 1
+            for (i in 1..y) valor *= x
+            valor
+        }
+        }")
 
         var num:Int = 0
         var juan:Person = Person("Juan Jose","1053847013",1.62f)
