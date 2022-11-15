@@ -71,6 +71,8 @@ class MainActivity : AppCompatActivity() {
         return resp
     }
 
+    class IllegalPasswordException(menj: String) : Exception(menj)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -257,6 +259,16 @@ class MainActivity : AppCompatActivity() {
         println(res1)
         var res2 = value_try(10,0) //Execute catch block
         println(res2)
+
+        /**
+         * Throw Exceptions
+         */
+        var password:String = "1234"
+        if(password.length < 6){
+            throw IllegalPasswordException("Password muy corta")
+        }else{
+            println("Password segura")
+        }
 
 
     }
