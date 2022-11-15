@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         return fn(height)
     }
 
+    private fun recorrerArray(array:IntArray, fn:(Int)->Unit){
+        for (i in array)
+            fn(i)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -109,6 +114,16 @@ class MainActivity : AppCompatActivity() {
         var array7 = IntArray(10) {i -> i*3}
         println("Array7: ")
         array7.show()
+
+        /**
+         * Acceso a variables externas lambdas
+         */
+        var suma = 0
+        recorrerArray(array7){
+            suma += it
+        }
+
+        println("La suma de todos los elementos del array7 es ${suma}")
 
         var num:Int = 0
         var juan:Person = Person("Juan Jose","1053847013",1.62f)
