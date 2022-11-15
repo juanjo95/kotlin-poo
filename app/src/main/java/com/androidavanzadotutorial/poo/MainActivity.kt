@@ -34,6 +34,19 @@ class MainActivity : AppCompatActivity() {
     private fun multiplicar(x:Int, y: Int):Int = x*y
     private fun dividir(x:Int, y: Int):Int = x/y
 
+    /**
+     * Funciones de orden superior en objetos
+     */
+    private fun inColombia(h:Float):Boolean{
+        return h>=1.6f
+    }
+    private fun inSpain(h:Float):Boolean{
+        return h>=1.65f
+    }
+
+    private fun Person.checkPolicia(fn: (Float)->Boolean):Boolean{
+        return fn(height)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,13 +77,19 @@ class MainActivity : AppCompatActivity() {
         println("La multiplicacion entre 7 y 7 es ${calculadora(7,7,::multiplicar)}")
         println("La division entre 12 y 3 es ${calculadora(12,3,::dividir)}")
 
+        /**
+         * Funciones de orden superior en objetos
+         */
+
 
         var num:Int = 0
-        var juan:Person = Person("Juan Jose","1053847013")
+        var juan:Person = Person("Juan Jose","1053847013",1.62f)
         var anonimo:Person = Person()
         println(juan.alive)
         println(juan.name)
         println(juan.passport)
+        //if(juan.checkPolicia(::inColombia)) println("${juan.name} puede ser policia en Colombia")
+        //if(juan.checkPolicia(::inSpain)) println("${juan.name} puede ser policia en España")
 
         anonimo.Person()
         anonimo.name = "Pablo"

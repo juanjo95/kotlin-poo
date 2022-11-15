@@ -1,6 +1,6 @@
 package com.androidavanzadotutorial.poo
 
-open class Person(var name:String = "Anonimo", var passport:String? = null) : Thanks(), SayBay, SayBye2 {
+open class Person(var name:String = "Anonimo", var passport:String? = null, var height:Float = 1.6f) : Thanks(), SayBay, SayBye2 {
 
     var alive:Boolean = true
     override var dato: Int
@@ -16,5 +16,9 @@ open class Person(var name:String = "Anonimo", var passport:String? = null) : Th
         alive = false
         this.thanksCure()
     }
+
+    /*fun checkPolicia(fn: (Float)->Boolean):Boolean{
+        return fn(height)
+    }*/
 
 }
