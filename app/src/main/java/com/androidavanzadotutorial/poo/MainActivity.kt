@@ -22,6 +22,19 @@ class MainActivity : AppCompatActivity() {
         println("]")
     }
 
+    /**
+     * Funciones orden superior
+     */
+    private fun calculadora(n1:Int, n2:Int, fn:(Int,Int)->Int):Int{
+        return fn(n1,n2)
+    }
+
+    private fun sumar(x:Int, y: Int):Int { return x+y }
+    private fun restar(x:Int, y: Int):Int { return x-y }
+    private fun multiplicar(x:Int, y: Int):Int = x*y
+    private fun dividir(x:Int, y: Int):Int = x/y
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,6 +55,15 @@ class MainActivity : AppCompatActivity() {
         var array3:IntArray = intArrayOf(1,2,3,4)
         println("Array3: ")
         array3.show()
+
+        /**
+         * Funciones de orden superior
+         */
+        println("La suma entre 80 y 20 es ${calculadora(80,20,::sumar)}")
+        println("La resta entre 50 y 10 es ${calculadora(50,10,::restar)}")
+        println("La multiplicacion entre 7 y 7 es ${calculadora(7,7,::multiplicar)}")
+        println("La division entre 12 y 3 es ${calculadora(12,3,::dividir)}")
+
 
         var num:Int = 0
         var juan:Person = Person("Juan Jose","1053847013")
