@@ -193,6 +193,16 @@ class MainActivity : AppCompatActivity() {
             "Marta no es muy alta"
         }
 
+        /**
+         * Operador Elvis
+         */
+        var pais:String? = "Rusia"
+        pais = pais?.uppercase() ?: "Desconocido"
+        println(pais)
+
+        var ciudad:String? = null
+        ciudad = ciudad?.uppercase() ?: "Desconocido"
+        println(ciudad)
 
         println(juan.alive)
 
