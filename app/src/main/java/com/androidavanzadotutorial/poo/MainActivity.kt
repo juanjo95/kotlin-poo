@@ -3,6 +3,13 @@ package com.androidavanzadotutorial.poo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+/**
+ * Typealias
+ */
+typealias aliasObjeto = SubClasses.Anidada
+typealias aliasDato = MutableMap<Int, ArrayList<String>>
+typealias funcion = (a:Int, b:Int)->Int
+
 class MainActivity : AppCompatActivity() {
 
     object ejemplo {
@@ -163,6 +170,16 @@ class MainActivity : AppCompatActivity() {
 
         var ani = SubClasses.Anidada()
         println(ani.presentar())
+
+        /**
+         * Typealias
+         */
+        var anidada = aliasObjeto()
+        println(anidada.presentar())
+
+        var saludos:aliasDato = mutableMapOf()
+        saludos[0] = arrayListOf("Hola","Chao")
+        saludos[1] = arrayListOf("Hi","Bye")
 
         var int = SubClasses().Interna()
         println(int.presentar())
