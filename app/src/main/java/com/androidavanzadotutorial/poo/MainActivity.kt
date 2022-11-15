@@ -94,6 +94,22 @@ class MainActivity : AppCompatActivity() {
         }
         }")
 
+        var array4 = IntArray(10) {5}
+        println("Array4: ")
+        array4.show()
+
+        var array5 = IntArray(10) {it}
+        println("Array5: ")
+        array5.show()
+
+        var array6 = IntArray(10) {it*2}
+        println("Array6: ")
+        array6.show()
+
+        var array7 = IntArray(10) {i -> i*3}
+        println("Array7: ")
+        array7.show()
+
         var num:Int = 0
         var juan:Person = Person("Juan Jose","1053847013",1.62f)
         var anonimo:Person = Person()
