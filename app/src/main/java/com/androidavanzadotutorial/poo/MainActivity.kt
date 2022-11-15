@@ -181,6 +181,8 @@ class MainActivity : AppCompatActivity() {
         saludos[0] = arrayListOf("Hola","Chao")
         saludos[1] = arrayListOf("Hi","Bye")
 
+        for ((id,palabras) in saludos) println("$id, $palabras")
+
         var int = SubClasses().Interna()
         println(int.presentar())
 
@@ -190,6 +192,22 @@ class MainActivity : AppCompatActivity() {
 
         var sol:Star = Star("Sol",696340f, "Via lactea")
         println(sol)
+
+        /**
+         * Desestructuracion
+         */
+        var (name_star2, radius_star2, galaxy2) = Star("Sol2",696340f, "Via lactea2")
+        println("Datos desesctructurados: $name_star2, $radius_star2, $galaxy2")
+
+        var (name_star3, radius_star3) = Star("Sol3",696340f, "Via lactea3")
+        println("Datos desesctructurados: $name_star3, $radius_star3")
+
+        var (name_star4,_,galaxy4) = Star("Sol4",696340f, "Via lactea4")
+        println("Datos desesctructurados: $name_star4, $galaxy4")
+
+        var componente = Star("Sol5",696340f, "Via lactea5")
+        println("Datos star5 con componentes ${componente.component1()}, ${componente.component2()}, ${componente.component3()}")
+
         println(sol.alive)
         sol.alive = false
         println(sol.alive)
