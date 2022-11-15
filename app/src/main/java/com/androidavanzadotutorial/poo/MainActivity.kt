@@ -60,6 +60,17 @@ class MainActivity : AppCompatActivity() {
             fn(i)
     }
 
+    private fun value_try(a:Int, b:Int):Any{
+        var resp = try {
+                        println("Dividiendo $a/$b")
+                        a/b
+                    }catch (e: Exception){
+                        println("Vamos a manejar este error")
+                        "Division no permitida"
+                    }
+        return resp
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -238,6 +249,14 @@ class MainActivity : AppCompatActivity() {
         }finally {
             println("Pase lo que pase vamos a continuar con la operacion")
         }
+
+        /**
+         * Almacenar valor try-catch
+         */
+        var res1 = value_try(10,2) //Execute try block
+        println(res1)
+        var res2 = value_try(10,0) //Execute catch block
+        println(res2)
 
 
     }
