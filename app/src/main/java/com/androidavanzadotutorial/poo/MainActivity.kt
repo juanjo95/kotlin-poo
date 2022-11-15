@@ -228,6 +228,17 @@ class MainActivity : AppCompatActivity() {
         println(hoy.horas)
         hoy =  Dias.DOMINGO
 
+        /**
+         * Try - Catch
+         */
+        try {
+            println("Dividiendo 5 /0 = ${5/0}")
+        }catch (e: Exception){
+            println("Vamos a manejar este error")
+        }finally {
+            println("Pase lo que pase vamos a continuar con la operacion")
+        }
+
 
     }
 }
