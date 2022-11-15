@@ -161,6 +161,39 @@ class MainActivity : AppCompatActivity() {
         println(anonimo.passport)
 
         juan.die()
+        juan.height = 1.8f
+        juan.passport = "ABC123"
+
+        /**
+         * Scope Functions
+         */
+        juan.let {
+            it.die()
+            it.height = 1.8f
+            it.passport = "ABC123"
+        }
+
+        var jose = Person("Jose","ARD456").apply {
+            this.die()
+            this.height = 1.8f
+            this.passport = "ABC123"
+        }.also {
+            it.alive = true
+        }
+
+        var maria = Person("Maria","CDF345",1.7f).run {
+            this.height = 1.8f
+            this.passport = "ABC123"
+            "Maria es muy alta"
+        }
+
+        var marta = with(Person("Maria","acf4567",1.4f)){
+            this.height = 1.3f
+            this.passport = "ABC123"
+            "Marta no es muy alta"
+        }
+
+
         println(juan.alive)
 
         var pele:Athlete = Athlete("Pele", "123456789","Futbol")
