@@ -12,6 +12,12 @@ typealias funcion = (a:Int, b:Int)->Int
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * lateinit
+     */
+    private lateinit var cadena:String
+    private var residente:Boolean = false
+
     object ejemplo {
         var apodo = "Eje"
         fun saludo(){
@@ -203,6 +209,13 @@ class MainActivity : AppCompatActivity() {
         var ciudad:String? = null
         ciudad = ciudad?.uppercase() ?: "Desconocido"
         println(ciudad)
+
+        /**
+         * lazy
+         */
+        val calle:String by lazy { "Nueva" }
+        var direccion = "$pais - $ciudad - $calle"
+        println(direccion)
 
         println(juan.alive)
 
