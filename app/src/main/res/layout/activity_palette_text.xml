@@ -12,13 +12,36 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dancing"
         android:text="Texto manipublable"
+        android:textAllCaps="true"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         android:typeface="serif"
-        android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/style_etbg"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="textCapSentences|textAutoCorrect"
+        android:digits="1234567890 "
+        android:gravity=""
+        android:text=""
+        android:hint="Name"
+        android:textColorHint="@color/orange"
+        android:textColor="@color/green"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="126dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
