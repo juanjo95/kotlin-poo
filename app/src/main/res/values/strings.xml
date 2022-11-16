@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">POO</string>
+    <string name="saludo">Hola!!!</string>
 </resources>
