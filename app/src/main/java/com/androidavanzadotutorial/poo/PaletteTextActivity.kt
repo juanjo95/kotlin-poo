@@ -4,6 +4,8 @@ import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -35,6 +37,13 @@ class PaletteTextActivity : AppCompatActivity() {
         var inicio = etEjemplo.selectionStart
         var fin = etEjemplo.selectionEnd
         etEjemplo.selectAll()
+
+        var autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
+        var countries: Array<String> = resources.getStringArray(R.array.countries_array)
+        var adapter: ArrayAdapter<String> = ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,countries)
+
+        autoCompleteTextView.setAdapter(adapter)
+
 
     }
 }
