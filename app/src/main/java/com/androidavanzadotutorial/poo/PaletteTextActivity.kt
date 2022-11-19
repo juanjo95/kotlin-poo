@@ -4,8 +4,10 @@ import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 
 class PaletteTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,16 @@ class PaletteTextActivity : AppCompatActivity() {
             Toast.makeText(this,"Texto",Toast.LENGTH_SHORT).show()
             tvEjemplo.setTextColor(Color.GREEN)
         }
+
+        var etEjemplo: EditText = findViewById(R.id.etEjemplo)
+        etEjemplo.addTextChangedListener {
+            if(etEjemplo.text.length == 0) etEjemplo.setError("Campo vacio")
+        }
+
+        etEjemplo.setSelection(3)
+        var inicio = etEjemplo.selectionStart
+        var fin = etEjemplo.selectionEnd
+        etEjemplo.selectAll()
 
     }
 }

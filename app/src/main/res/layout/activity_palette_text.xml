@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.051" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etEjemplo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -36,8 +36,9 @@
         android:paddingBottom="10dp"
         android:inputType="textCapSentences|textAutoCorrect"
         android:digits="1234567890 "
+        android:textColorHighlight="@color/orange"
         android:gravity=""
-        android:text=""
+        android:text="123456789"
         android:hint="Name"
         android:textColorHint="@color/orange"
         android:textColor="@color/green"
