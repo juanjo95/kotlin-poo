@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class PaletteButtonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,6 +80,14 @@ class PaletteButtonActivity : AppCompatActivity() {
         swNormal.setOnCheckedChangeListener{_,isChecked ->
             if(isChecked) Toast.makeText(this,"Switch Activado",Toast.LENGTH_SHORT).show()
             else Toast.makeText(this,"Switch Desactivado",Toast.LENGTH_SHORT).show()
+        }
+
+        /**
+         * FloatingActionButton
+         */
+        var fabButton: FloatingActionButton = findViewById(R.id.fabButton)
+        fabButton.setOnClickListener {
+            Toast.makeText(this,"FabButton pulsado",Toast.LENGTH_SHORT).show()
         }
 
     }

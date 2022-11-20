@@ -163,6 +163,15 @@
             android:thumb="@drawable/sw_thumb"
             app:track="@drawable/sw_track"/>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_airplane"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/orange"/>
+
     </LinearLayout>
 
 </ScrollView>
