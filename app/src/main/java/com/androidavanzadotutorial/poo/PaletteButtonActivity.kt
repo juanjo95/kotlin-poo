@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Switch
 import android.widget.Toast
 import android.widget.ToggleButton
 import androidx.core.content.ContextCompat
@@ -71,6 +72,14 @@ class PaletteButtonActivity : AppCompatActivity() {
             else Toast.makeText(this,"Toggle Desactivado",Toast.LENGTH_SHORT).show()
         }
 
+        /**
+         * Switch
+         */
+        var swNormal: Switch = findViewById(R.id.swNormal)
+        swNormal.setOnCheckedChangeListener{_,isChecked ->
+            if(isChecked) Toast.makeText(this,"Switch Activado",Toast.LENGTH_SHORT).show()
+            else Toast.makeText(this,"Switch Desactivado",Toast.LENGTH_SHORT).show()
+        }
 
     }
 

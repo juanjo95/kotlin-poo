@@ -135,12 +135,21 @@
         <ToggleButton
             android:id="@+id/tgCustom"
             android:layout_width="72dp"
-            android:layout_height="38dp"
-            android:text=""
-            android:textOn=""
-            android:textOff=""
+            android:layout_height="34dp"
+            android:background="@drawable/tg_travel_bg"
             android:checked="true"
-            android:background="@drawable/tg_travel_bg"/>
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+        <Switch
+            android:id="@+id/swNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notificar por email"
+            android:thumb="@drawable/ic_email"
+            android:thumbTint="@color/orange"
+            android:trackTint="@color/green"/>
 
     </LinearLayout>
 
