@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import android.widget.ToggleButton
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import com.google.android.material.chip.Chip
@@ -60,6 +61,16 @@ class PaletteButtonActivity : AppCompatActivity() {
         var cbSeguro:CheckBox = findViewById(R.id.cbSeguro)
         cbSeguro.isEnabled = true
         cbSeguro.isChecked = true
+
+        /**
+         * ToggleButton
+         */
+        var tgNormal: ToggleButton = findViewById(R.id.tgNormal)
+        tgNormal.setOnCheckedChangeListener{_,isChecked ->
+            if(isChecked) Toast.makeText(this,"Toggle Activado",Toast.LENGTH_SHORT).show()
+            else Toast.makeText(this,"Toggle Desactivado",Toast.LENGTH_SHORT).show()
+        }
+
 
     }
 

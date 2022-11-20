@@ -123,6 +123,15 @@
             android:button="@drawable/cb_custom"
             android:onClick="onCheckBoxClicked"/>
 
+        <ToggleButton
+            android:id="@+id/tgNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textOn="Si"
+            android:textOff="No"
+            android:checked="true"/>
+
     </LinearLayout>
 
 </ScrollView>
