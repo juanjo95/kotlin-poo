@@ -3,6 +3,8 @@ package com.androidavanzadotutorial.poo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
@@ -47,5 +49,23 @@ class PaletteButtonActivity : AppCompatActivity() {
             Toast.makeText(this,"${aux.text} pulsado",Toast.LENGTH_SHORT).show()
         }
 
+        var rgVacaciones = findViewById(R.id.rgVacaciones) as RadioGroup
+        var rb = rgVacaciones.getChildAt(1) as RadioButton
+        rgVacaciones.check(rb.id)
+    }
+
+    fun onRadioButtonClicked(v:View){
+        if(v is RadioButton){
+            var checked = v.isChecked
+
+            when(v.id){
+                R.id.rbPlaya -> {
+                    if(checked) Toast.makeText(this,"Vamos a la playa",Toast.LENGTH_SHORT).show()
+                }
+                R.id.rbMontaña -> {
+                    if(checked) Toast.makeText(this,"Vamos a la montaña",Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 }
