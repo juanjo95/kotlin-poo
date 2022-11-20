@@ -105,6 +105,22 @@
                 android:button="@null"/>
         </RadioGroup>
 
+        <CheckBox
+            android:id="@+id/cbSeguro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seguro de viaje"
+            android:buttonTint="@color/orange"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbCancelable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reserva cancelable"
+            android:checked="true"
+            android:button="@drawable/cb_custom"/>
+
     </LinearLayout>
 
 </ScrollView>
