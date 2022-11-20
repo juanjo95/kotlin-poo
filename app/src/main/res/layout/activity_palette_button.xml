@@ -55,6 +55,25 @@
                 style="@style/chEntry"/>
         </com.google.android.material.chip.ChipGroup>
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rbPlaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playa"
+                android:buttonTint="@color/orange"/>
+            <RadioButton
+                android:id="@+id/rbMontaña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Montaña"
+                android:checked="true"/>
+        </RadioGroup>
+
     </LinearLayout>
 
 </ScrollView>
