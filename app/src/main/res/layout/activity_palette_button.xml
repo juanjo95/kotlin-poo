@@ -132,6 +132,16 @@
             android:textOff="No"
             android:checked="true"/>
 
+        <ToggleButton
+            android:id="@+id/tgCustom"
+            android:layout_width="72dp"
+            android:layout_height="38dp"
+            android:text=""
+            android:textOn=""
+            android:textOff=""
+            android:checked="true"
+            android:background="@drawable/tg_travel_bg"/>
+
     </LinearLayout>
 
 </ScrollView>
