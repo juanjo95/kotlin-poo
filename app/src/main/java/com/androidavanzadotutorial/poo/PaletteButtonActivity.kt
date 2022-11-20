@@ -3,6 +3,7 @@ package com.androidavanzadotutorial.poo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
@@ -52,6 +53,14 @@ class PaletteButtonActivity : AppCompatActivity() {
         var rgVacaciones = findViewById(R.id.rgVacaciones) as RadioGroup
         var rb = rgVacaciones.getChildAt(1) as RadioButton
         rgVacaciones.check(rb.id)
+
+        /**
+         * Checkbox
+         */
+        var cbSeguro:CheckBox = findViewById(R.id.cbSeguro)
+        cbSeguro.isEnabled = true
+        cbSeguro.isChecked = true
+
     }
 
     fun onRadioButtonClicked(v:View){
@@ -64,6 +73,23 @@ class PaletteButtonActivity : AppCompatActivity() {
                 }
                 R.id.rbMontaña -> {
                     if(checked) Toast.makeText(this,"Vamos a la montaña",Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    fun onCheckBoxClicked(v:View){
+        if(v is CheckBox){
+            var checked = v.isChecked
+
+            when(v.getId()){
+                R.id.cbSeguro -> {
+                    if(checked) Toast.makeText(this,"Seguro contratado",Toast.LENGTH_SHORT).show()
+                    else Toast.makeText(this,"Seguro anulado",Toast.LENGTH_SHORT).show()
+                }
+                R.id.cbCancelable -> {
+                    if(checked) Toast.makeText(this,"La reserva podra ser cancelada",Toast.LENGTH_SHORT).show()
+                    else Toast.makeText(this,"La reserva NO podra ser cancelada",Toast.LENGTH_SHORT).show()
                 }
             }
         }

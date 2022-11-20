@@ -111,7 +111,8 @@
             android:layout_height="wrap_content"
             android:text="Seguro de viaje"
             android:buttonTint="@color/orange"
-            android:enabled="false"/>
+            android:enabled="false"
+            android:onClick="onCheckBoxClicked"/>
 
         <CheckBox
             android:id="@+id/cbCancelable"
@@ -119,7 +120,8 @@
             android:layout_height="wrap_content"
             android:text="Reserva cancelable"
             android:checked="true"
-            android:button="@drawable/cb_custom"/>
+            android:button="@drawable/cb_custom"
+            android:onClick="onCheckBoxClicked"/>
 
     </LinearLayout>
 
