@@ -77,6 +77,34 @@
                 android:onClick="onRadioButtonClicked"/>
         </RadioGroup>
 
+        <RadioGroup
+            android:id="@+id/rgOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@id/rbCar"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/rbCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_car_bg"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/rbAirplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_airplane_bg"
+                android:button="@null"/>
+            <RadioButton
+                android:id="@+id/rbTrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_train_bg"
+                android:button="@null"/>
+        </RadioGroup>
+
     </LinearLayout>
 
 </ScrollView>
