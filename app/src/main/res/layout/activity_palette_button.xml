@@ -151,6 +151,18 @@
             android:thumbTint="@color/orange"
             android:trackTint="@color/green"/>
 
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Off"
+            android:textOn="On"
+            app:showText="true"
+            android:text="Notificacion de cambios "
+            android:checked="true"
+            android:thumb="@drawable/sw_thumb"
+            app:track="@drawable/sw_track"/>
+
     </LinearLayout>
 
 </ScrollView>
