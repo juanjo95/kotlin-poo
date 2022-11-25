@@ -13,9 +13,9 @@ class PalettWidgetsActivity : AppCompatActivity() {
         /**
          * ImageView Url
          */
-        var ivEjemplo: ImageView = findViewById(R.id.iv)
+        /*var ivEjemplo: ImageView = findViewById(R.id.iv)
         val imageURL = "https://http2.mlstatic.com/D_NQ_NP_669593-MCO50195190532_062022-O.webp"
-        Picasso.get().load(imageURL).into(ivEjemplo)
+        Picasso.get().load(imageURL).into(ivEjemplo)*/
 
     }
 }
