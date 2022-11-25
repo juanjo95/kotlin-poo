@@ -17,6 +17,79 @@
             android:layout_height="500dp"
             android:src="@drawable/payu"/>
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivCircular"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/Circular"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivCircularWithStroke"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeColor="#00BCD4"
+            app:strokeWidth="5dp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivRoundedSquare"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivRoundedSquareWithStroke"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:strokeColor="#00BCD4"
+            app:strokeWidth="5dp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivCornerCut"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/CornerCut"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivDiamond"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/DiamondCut"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpecificCornerCut"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/SpecificCornerCut"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpecificCornerRounded"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:src="@drawable/shapeable_image"
+            app:shapeAppearanceOverlay="@style/SpecificCornerRounded"/>
+
     </LinearLayout>
 
 </ScrollView>
