@@ -119,6 +119,54 @@
             android:layout_marginTop="16dp"
             android:text="Fecha seleccionada: "/>
 
+        <ProgressBar
+            android:id="@+id/pbMedium"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:id="@+id/pbSmall"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:id="@+id/pbLarge"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/pbIndeterminado"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/orange"/>
+        <ProgressBar
+            android:id="@+id/pbDeterminado"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="300"
+            android:progress="100"
+            android:progressBackgroundTint="@color/black"
+            android:progressTint="@color/blue_dark"
+            android:indeterminateTint="@color/orange"/>
+        <ProgressBar
+            android:id="@+id/pbSecundaria"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="300"
+            android:progress="100"
+            android:secondaryProgress="130"
+            android:progressBackgroundTint="@color/black"
+            android:progressTint="@color/blue_dark"
+            android:indeterminateTint="@color/orange"
+            android:secondaryProgressTint="@color/cardview_dark_background"/>
+
     </LinearLayout>
 
 </ScrollView>
