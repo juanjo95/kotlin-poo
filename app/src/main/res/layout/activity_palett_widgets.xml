@@ -96,6 +96,17 @@
             android:layout_height="1500dp"
             tools:ignore="WebViewLayout" />
 
+        <VideoView
+            android:id="@+id/vvLocal"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:backgroundTint="@color/orange"/>
+
+        <VideoView
+            android:id="@+id/vvWeb"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
     </LinearLayout>
 
 </ScrollView>

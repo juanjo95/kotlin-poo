@@ -1,11 +1,14 @@
 package com.androidavanzadotutorial.poo
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ImageView
+import android.widget.MediaController
+import android.widget.VideoView
 import com.squareup.picasso.Picasso
 
 class PalettWidgetsActivity : AppCompatActivity() {
@@ -29,6 +32,28 @@ class PalettWidgetsActivity : AppCompatActivity() {
         webView.setWebViewClient(WebViewClient())
 
         webView.loadUrl("https://www.google.com/")
+
+        /**
+         * VideoView
+         */
+        //web
+        var vvWeb:VideoView = findViewById(R.id.vvWeb)
+        var mcWeb = MediaController(this)
+
+        mcWeb.setAnchorView(vvWeb)
+        vvWeb.setVideoPath("https://jotajotavm.com/img/video.mp4")
+        vvWeb.setMediaController(mcWeb)
+
+        //local
+        var vvLocal:VideoView = findViewById(R.id.vvLocal)
+        var mcLocal = MediaController(this)
+
+        mcLocal.setAnchorView(vvLocal)
+        var path:String = "android.resource://"+packageName+"/"+R.raw.video
+        vvLocal.setVideoURI(Uri.parse(path))
+        vvLocal.setMediaController(mcLocal)
+        vvLocal.start()
+
     }
 
 
