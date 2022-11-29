@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.MediaController
+import android.widget.TextView
 import android.widget.VideoView
 import com.squareup.picasso.Picasso
+import java.util.Calendar
 
 class PalettWidgetsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +56,26 @@ class PalettWidgetsActivity : AppCompatActivity() {
         vvLocal.setVideoURI(Uri.parse(path))
         vvLocal.setMediaController(mcLocal)
         vvLocal.start()
+
+        /**
+         * Calendar View
+         */
+        var cvEjemplo:CalendarView = findViewById(R.id.cvEjemplo)
+        var tvFecha:TextView = findViewById(R.id.tvFecha)
+        
+        cvEjemplo.setOnDateChangeListener { cv, year, month, day ->
+            var date = "$day/${month+1}/$year"
+            tvFecha.text = "Fecha selecionada: $date"
+        }
+
+        //Setiar fechas
+        var calendar = Calendar.getInstance()
+        calendar.set(2026,5-1,8)
+        cvEjemplo.date = calendar.timeInMillis
+
+        var d = cvEjemplo.firstDayOfWeek
+        cvEjemplo.firstDayOfWeek = (d+1)%7
+        
 
     }
 
