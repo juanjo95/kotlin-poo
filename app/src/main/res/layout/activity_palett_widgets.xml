@@ -182,7 +182,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="100"
-            android:progress="30"/>
+            android:progress="30"
+            android:thumb="@drawable/sb_thumb"
+            android:progressDrawable="@drawable/sb_progress_bg"/>
 
         <SeekBar
             android:id="@+id/seekBar2"
