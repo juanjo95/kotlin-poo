@@ -167,6 +167,31 @@
             android:indeterminateTint="@color/orange"
             android:secondaryProgressTint="@color/cardview_dark_background"/>
 
+        <SeekBar
+            android:id="@+id/sbNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/purple_500"
+            android:progressBackgroundTint="@color/blue_dark"
+            android:progressTint="@color/orange"
+            android:thumb="@drawable/ic_car"
+            android:max="100"
+            android:progress="30"/>
+        <SeekBar
+            android:id="@+id/sbCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="30"/>
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="3" />
+
     </LinearLayout>
 
 </ScrollView>
