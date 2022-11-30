@@ -154,7 +154,7 @@
             android:progressTint="@color/blue_dark"
             android:indeterminateTint="@color/orange"/>
         <ProgressBar
-            android:id="@+id/pbSecundaria"
+            android:id="@+id/pbSecundario"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

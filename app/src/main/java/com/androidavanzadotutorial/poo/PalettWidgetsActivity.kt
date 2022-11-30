@@ -9,9 +9,12 @@ import android.webkit.WebViewClient
 import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.MediaController
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.VideoView
 import com.squareup.picasso.Picasso
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.Calendar
 
 class PalettWidgetsActivity : AppCompatActivity() {
@@ -75,8 +78,34 @@ class PalettWidgetsActivity : AppCompatActivity() {
 
         var d = cvEjemplo.firstDayOfWeek
         cvEjemplo.firstDayOfWeek = (d+1)%7
-        
 
+        /**
+         * ProgressBar desde código DETERMINADO - SECUNDARIO
+         */
+        var pbDeterminado:ProgressBar = findViewById(R.id.pbDeterminado)
+        var pbSecundario:ProgressBar = findViewById(R.id.pbSecundario)
+
+        pbDeterminado.max = 200
+        pbDeterminado.progress = 0
+        pbSecundario.progress = 0
+        pbSecundario.secondaryProgress = 0
+
+        GlobalScope.launch {
+            progressManager(pbDeterminado)
+            progressManager(pbSecundario)
+        }
+
+    }
+
+    private fun progressManager(pb:ProgressBar){
+        while(pb.progress < pb.max){
+            Thread.sleep(100L)
+            //pb.progress += 5
+            pb.incrementProgressBy(5)
+            if(pb.id == R.id.pbSecundario){
+                pb.incrementSecondaryProgressBy(10)
+            }
+        }
     }
 
 
