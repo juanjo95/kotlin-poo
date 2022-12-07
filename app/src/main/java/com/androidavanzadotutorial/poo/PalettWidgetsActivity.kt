@@ -11,6 +11,7 @@ import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.ProgressBar
+import android.widget.RatingBar
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
@@ -97,6 +98,16 @@ class PalettWidgetsActivity : AppCompatActivity() {
         pbDeterminado.progress = 0
         pbSecundario.progress = 0
         pbSecundario.secondaryProgress = 0
+
+        /**
+         * RatingBar
+         */
+        var rbEjemplo: RatingBar = findViewById(R.id.ratingBar)
+        var tvRating: TextView = findViewById(R.id.tvRating)
+        rbEjemplo.rating = 2.5f
+        rbEjemplo.setOnRatingBarChangeListener { ratingBar, rating, b ->
+            tvRating.text = "${rating}/${ratingBar.numStars}"
+        }
 
         /**
          * SeekBar desde código y diseños alternativos

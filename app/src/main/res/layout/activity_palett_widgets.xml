@@ -195,6 +195,23 @@
             android:max="10"
             android:progress="3" />
 
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="@android:style/Widget.Material.Light.RatingBar.Small"
+            android:isIndicator="false"
+            android:stepSize="0.5"
+            android:rating="3"
+            android:progressBackgroundTint="@color/blue_light"
+            android:progressTint="@color/orange"/>
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3/5"/>
+
     </LinearLayout>
 
 </ScrollView>
