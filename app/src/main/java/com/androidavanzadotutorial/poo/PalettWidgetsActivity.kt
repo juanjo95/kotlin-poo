@@ -7,11 +7,14 @@ import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ArrayAdapter
 import android.widget.CalendarView
 import android.widget.ImageView
+import android.widget.ListView
 import android.widget.MediaController
 import android.widget.ProgressBar
 import android.widget.RatingBar
+import android.widget.SearchView
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
@@ -74,7 +77,7 @@ class PalettWidgetsActivity : AppCompatActivity() {
          */
         var cvEjemplo:CalendarView = findViewById(R.id.cvEjemplo)
         var tvFecha:TextView = findViewById(R.id.tvFecha)
-        
+
         cvEjemplo.setOnDateChangeListener { cv, year, month, day ->
             var date = "$day/${month+1}/$year"
             tvFecha.text = "Fecha selecionada: $date"
@@ -108,6 +111,7 @@ class PalettWidgetsActivity : AppCompatActivity() {
         rbEjemplo.setOnRatingBarChangeListener { ratingBar, rating, b ->
             tvRating.text = "${rating}/${ratingBar.numStars}"
         }
+
 
         /**
          * SeekBar desde código y diseños alternativos
