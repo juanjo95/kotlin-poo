@@ -12,6 +12,7 @@ import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.MediaController
+import android.widget.NumberPicker
 import android.widget.ProgressBar
 import android.widget.RatingBar
 import android.widget.SearchView
@@ -110,6 +111,22 @@ class PalettWidgetsActivity : AppCompatActivity() {
         rbEjemplo.rating = 2.5f
         rbEjemplo.setOnRatingBarChangeListener { ratingBar, rating, b ->
             tvRating.text = "${rating}/${ratingBar.numStars}"
+        }
+
+        /**
+         * NumberPicker
+         */
+        var npEjemplo:NumberPicker = findViewById(R.id.npEjemplo)
+        var tvNumberPicker:TextView = findViewById(R.id.tvNumberPicker)
+
+        npEjemplo.minValue = 0
+        npEjemplo.maxValue = 60
+        npEjemplo.value = 5
+        npEjemplo.wrapSelectorWheel = true
+        npEjemplo.setFormatter { i -> String.format("%02d",i) }
+        
+        npEjemplo.setOnValueChangedListener { numberPicker, oldValue, newValue ->
+            tvNumberPicker.text = "NumberPicker: Antes (${oldValue}) - Ahora (${newValue})"
         }
 
 
