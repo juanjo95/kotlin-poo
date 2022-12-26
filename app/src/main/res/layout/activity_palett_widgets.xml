@@ -229,6 +229,20 @@
             android:layout_marginTop="16dp"
             android:text="Fecha seleccionada: "/>
 
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:layout_width="@dimen/seekbar_size_small"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/seekbar_margin"
+            android:layout_marginLeft="@dimen/seekbar_margin"
+            android:layout_marginRight="@dimen/seekbar_margin"
+            app:cs_negative_enabled="true"
+            app:cs_circle_style="round"
+            app:cs_circle_stroke_width="8dp"
+            app:cs_pointer_stroke_width="24dp"
+            app:cs_progress = "30"
+            app:cs_max = "100"
+            app:cs_pointer_halo_width="@dimen/seekbar_holo_width"/>
 
         <RatingBar
             android:id="@+id/ratingBar"
