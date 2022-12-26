@@ -208,6 +208,16 @@
             android:background="@color/orange"
             android:layout_gravity="center"/>
 
+        <Chronometer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <RatingBar
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
