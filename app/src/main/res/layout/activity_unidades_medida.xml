@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnidadesMedidaActivity"
+    android:orientation="vertical">
+
+    <!--
+        - Un pixel: Es la menor unidad homogenea en color que forma parte de una imagen digital.
+        - La densidad de pixeles: Es la cantidad de pixeles que cabe en una pulgada, las pantallas de alta densidad tienen mas pixeles por pulgada que los de baja densidad.
+        - Pixeles de densidad independiente (dp o dip): Son unidades flexibles que se escalan a dimensiones uniformes en cualquier pantalla, un dp es igual a un pixel en una pantalla de densidad de 160
+            para calcular un dp: dp = (ancho en pixeles * 160) / densidad de la pantalla.
+        - Pixeles de escala independiente (sp): Tiene la misma funcion de los dp, pero se usan para las fuentes. El valor por defecto de un sp es el mismo que el valor por defecto del dp.
+            La diferencia principal entre un sp y un dp, es que el sp preserva los ajustes del usuario respecto a la fuente, los usuarios que tengan ajustes para agrandar el texto veran que el tamaño del texto
+            concuerda con sus preferencias.
+        - mm (Milimetros): Son milimetros reales segun el tamaño fisico de la pantalla.
+        - in (Pulgadas): Son pulgadas reales segun el tamaño fisico de la pantalla.
+        - pt (Points): Es un 1/72 de una pulgada segun el tamaño fisico de la pantalla.
+    -->
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Texto con size: 16sp - width: 300dp"
+        android:background="@color/orange"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Texto con size: 16dp - width: 300dp"
+        android:background="@color/green"
+        android:textSize="16dp"/>
+    <TextView
+        android:id="@+id/tV3"
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:text="Texto con width: 250px"
+        android:background="@color/green"
+        android:textSize="16dp"/>
+    <TextView
+        android:id="@+id/tV4"
+        android:layout_width="40mm"
+        android:layout_height="wrap_content"
+        android:text="Texto con width: 40mm"
+        android:background="@color/green"
+        android:textSize="16dp"/>
+    <TextView
+        android:id="@+id/tV5"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:text="Texto con width: 2in"
+        android:background="@color/green"
+        android:textSize="16dp"/>
+    <TextView
+        android:id="@+id/tV6"
+        android:layout_width="72pt"
+        android:layout_height="wrap_content"
+        android:text="Texto con width: 72pt"
+        android:background="@color/green"
+        android:textSize="16dp"/>
+</LinearLayout>
