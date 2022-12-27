@@ -20,6 +20,8 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.VideoView
+import com.androidavanzadotutorial.poo.databinding.ActivityMainBinding
+import com.androidavanzadotutorial.poo.databinding.ActivityPalettWidgetsBinding
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -29,9 +31,21 @@ class PalettWidgetsActivity : AppCompatActivity() {
 
     private lateinit var activityContext:Context
 
+    /**
+     * ViewBinding
+     */
+    private lateinit var binding:ActivityPalettWidgetsBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_palett_widgets)
+
+        /**
+         * ViewBinding
+         */
+        binding = ActivityPalettWidgetsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //setContentView(R.layout.activity_palett_widgets)
 
         activityContext = this
 
@@ -117,7 +131,7 @@ class PalettWidgetsActivity : AppCompatActivity() {
          * NumberPicker
          */
         var npEjemplo:NumberPicker = findViewById(R.id.npEjemplo)
-        var tvNumberPicker:TextView = findViewById(R.id.tvNumberPicker)
+        //var tvNumberPicker:TextView = findViewById(R.id.tvNumberPicker)
 
         npEjemplo.minValue = 0
         npEjemplo.maxValue = 60
@@ -126,7 +140,12 @@ class PalettWidgetsActivity : AppCompatActivity() {
         npEjemplo.setFormatter { i -> String.format("%02d",i) }
         
         npEjemplo.setOnValueChangedListener { numberPicker, oldValue, newValue ->
-            tvNumberPicker.text = "NumberPicker: Antes (${oldValue}) - Ahora (${newValue})"
+            //tvNumberPicker.text = "NumberPicker: Antes (${oldValue}) - Ahora (${newValue})"
+
+            /**
+             * ViewBinding
+             */
+            binding.tvNumberPicker.text = "NumberPicker: Antes (${oldValue}) - Ahora (${newValue})"
         }
 
 
