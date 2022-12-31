@@ -16,7 +16,7 @@
         android:translationY="20dp"
         android:scaleX="1.2"
         android:scaleY="1.2"/>
-    
+
     <View
         android:id="@+id/vA"
         android:layout_width="match_parent"
